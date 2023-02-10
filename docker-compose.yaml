@@ -1,0 +1,17 @@
+version: "3.3"
+services:
+  db:
+    image: postgis/postgis:14-master
+    volumes:
+      - crispy-umbrella-db:/var/lib/postgresql/data/pgdata
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
+      - POSTGRES_HOST=localhost
+      - POSTGRES_DB=crispyumbrella
+      - POSTGRES_USER=crispyumbrella
+      - POSTGRES_PASSWORD=crispyumbrella
+    ports:
+      - "5432:5432"
+
+volumes:
+  crispy-umbrella-db:
