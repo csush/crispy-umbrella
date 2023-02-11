@@ -44,4 +44,15 @@
         // Match what black does.
         "--max-line-length=120"
     ],
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "127.0.0.1",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "crispy",
+            "database": "crispyumbrella",
+            "username": "crispyumbrella"
+        }
+    ],
 }
