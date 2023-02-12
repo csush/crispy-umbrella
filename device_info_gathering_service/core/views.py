@@ -1,13 +1,8 @@
 from core.models import Company
 from core.serializers import CompanySerializer
-from rest_framework import generics, mixins
+from rest_framework import viewsets
 
 
-class CompanyList(generics.ListCreateAPIView):
-    queryset = Company.objects.all()
-    serializer_class = CompanySerializer
-
-
-class CompanyDetail(generics.RetrieveUpdateDestroyAPIView):
+class CompanyViewSet(viewsets.ModelViewSet):
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
