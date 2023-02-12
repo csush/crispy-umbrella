@@ -17,6 +17,7 @@ psycopg2-binary = "^2.9.5"
 yapf = "^0.32.0"
 pylint = "^2.16.1"
 flake8 = "^6.0.0"
+httpie = "^3.2.1"
 
 [build-system]
 requires = ["poetry-core"]
