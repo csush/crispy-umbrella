@@ -29,12 +29,10 @@ class BaseModel(models.Model):
 
 class Company(BaseModel):
     name = models.CharField(
-        verbose_name=_('Name'),
         max_length=100,
         unique=True,
     )
 
     location = models.CharField(
-        verbose_name=_('Location'),
         max_length=100,
     )
