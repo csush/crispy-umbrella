@@ -13,5 +13,16 @@ services:
     ports:
       - "5432:5432"
 
+  app:
+    command: sh -c "poetry run python device_info_gathering_service/manage.py migrate --no-input && poetry run python device_info_gathering_service/manage.py runserver 0.0.0.0:8000"
+    build: .
+    volumes:
+      - .:/usr/crispy-umbrella
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    restart: on-failure
+
 volumes:
   crispy-umbrella-db:
